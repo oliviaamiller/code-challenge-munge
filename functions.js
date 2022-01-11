@@ -92,7 +92,6 @@ export function makeSpanishLanguageArray(arr) {
             nombre: pet.name,
             tipo: pet.type
         };
-    
     }); 
     return spanishArr;
 }
@@ -121,7 +120,14 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-    return [];
+    const hungryArr = arr.map(pet => {
+        return {
+            name: pet.name,
+            isHungry: true,
+            type: pet.type
+        };
+    }); 
+    return hungryArr;
 }
 
 /*
