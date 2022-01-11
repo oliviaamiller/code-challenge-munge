@@ -231,7 +231,12 @@ Output:
 */
 
 export function getChevyCars(arr) {
-    return [];
+    const getChevy = arr.filter(vehicle => {
+        if(vehicle.make === 'chevy' && vehicle.type === 'car') {
+            return true;
+        }
+    });
+    return getChevy;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
