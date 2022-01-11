@@ -15,15 +15,9 @@ OUTPUT:
 */
 
 export function findByName(name, arr) {
-    const findName = arr.filter(pet => pet.name === name);
+    const findName = arr.filter(pet => pet.name === name)[0];
     return findName;
 }
-
-// export function findByName(name, arr) {
-//     const names = arr.map(pet => pet);
-//     return names[1];
-
-// }
 
 /*
 OUTPUT: 
@@ -34,7 +28,10 @@ OUTPUT:
 ]*/
 
 export function getDogs(arr) {
-    return [];
+    const dog = arr.map((pet) => {
+        return pet.name;
+    });
+    return dog;
 }
 
 /*
@@ -54,7 +51,10 @@ Output:
 */
 
 export function makeArrayOfNames(arr) {
-    return [];
+    const namesArr = arr.map(pet => {
+        return pet.name;
+    });
+    return namesArr;
 }
 
 /*
@@ -79,14 +79,14 @@ Output:
 */
 
 export function makeSpanishLanguageArray(arr) {
-    const newArr = arr.map(pet => {
+    const spanishArr = arr.map(pet => {
         return {
             nombre: pet.name,
             tipo: pet.type
         };
     
     }); 
-    return newArr;
+    return spanishArr;
 }
 
 
