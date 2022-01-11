@@ -187,9 +187,15 @@ Output:
 */
 
 export function makeArrayOfArraysOfArrays(arr) {
-    return [];
-}
+    const arrArr = arr.map(pet => {
+        return [
+            ['name', pet.name],
+            ['type', pet.type]
+        ];
+    }); 
+    return arrArr;
 
+}
 ////////////////////////////////////////////////////////
 
 /*

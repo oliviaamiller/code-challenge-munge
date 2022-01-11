@@ -120,7 +120,7 @@ test('should return a proper array of strings', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
-skip('should return a proper array of arrays', (expect) => {
+test('should return a proper array of arrays', (expect) => {
     const expected = [
         [['name', 'scooter'], ['type', 'dog']], 
         [['name', 'sassy'], ['type', 'dog']], 
