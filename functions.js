@@ -158,7 +158,10 @@ Output:
 */
 
 export function makeStringArray(arr) {
-   
+    const stringArr = arr.map(pet => {
+        return `${pet.name.toString()}${pet.type.toString()}`;
+    }); 
+    return stringArr;
 }
 
 /*
