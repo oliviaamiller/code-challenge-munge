@@ -28,10 +28,12 @@ OUTPUT:
 ]*/
 
 export function getDogs(arr) {
-    const dog = arr.map((pet) => {
-        return pet.name;
+    const dogs = arr.filter(pet => {
+        if(pet.type === 'dog') {
+            return true;
+        }
     });
-    return dog;
+    return dogs;
 }
 
 /*
