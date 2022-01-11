@@ -15,8 +15,15 @@ OUTPUT:
 */
 
 export function findByName(name, arr) {
-    return {};
+    const findName = arr.filter(pet => pet.name === name);
+    return findName;
 }
+
+// export function findByName(name, arr) {
+//     const names = arr.map(pet => pet);
+//     return names[1];
+
+// }
 
 /*
 OUTPUT: 
@@ -72,8 +79,18 @@ Output:
 */
 
 export function makeSpanishLanguageArray(arr) {
-    return [];
+    const newArr = arr.map(pet => {
+        return {
+            nombre: pet.name,
+            tipo: pet.type
+        };
+    
+    }); 
+    return newArr;
 }
+
+
+
 
 /*
 Output:

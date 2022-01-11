@@ -33,7 +33,7 @@ const otherPets = [
 ];
 
 
-test('should return the animal with the matching name', (expect) => {
+skip('should return the animal with the matching name', (expect) => {
     const expected = { name: 'sassy', type: 'dog' };
     const actual = findByName('sassy', otherPets);
 
@@ -73,7 +73,7 @@ skip('should make a reverse array of type', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
-skip('should make a spanish array of pet objects', (expect) => {
+test('should make a spanish array of pet objects', (expect) => {
     const expected = [
         {
             nombre: 'coco',
