@@ -114,7 +114,7 @@ skip('should return a shouting array', (expect) => {
 });
 
 skip('should return a proper array of strings', (expect) => { 
-    const expected = ['scooterpuppy', 'sassypuppy', 'legzofrog', 'fluffsquirrel'];
+    const expected = ['scooterdog', 'sassydog', 'legzofrog', 'fluffsquirrel'];
     const actual = makeStringArray(otherPets);
 
     expect.deepEqual(actual, expected);
@@ -144,9 +144,9 @@ const vehicles = [
 
 skip('should return an array of cars', (expect) => {
     const expected = [
-        { type: 'car', make: 'ford', model: 'taurus' },
-        { type: 'car', make: 'chevy', model: 'malibu' },
-        { type: 'car', make: 'chevy', model: 'camero' },
+        { type: 'car', make: 'ford', model: 'taurus', age: 2 },
+        { type: 'car', make: 'chevy', model: 'malibu', age: 3 },
+        { type: 'car', make: 'chevy', model: 'camero', age: 1 },
     ];
 
     const actual = getCars(vehicles);

@@ -1,6 +1,3 @@
-// Use the forEach method to solve these problems! If the function returns an array, it should return a NEW array, without mutating the old array.
-
-
 /*
 For this first set of functions, assume the input array looks like this:
 
@@ -84,9 +81,9 @@ Output:
 ['spot', 'rover', 'jumpy', 'einstein']
 */
 
-export function makeArrayOfNamesWithMap(arr) {
-    return [];
-}
+// export function makeArrayOfNamesWithMap(arr) {
+//     return [];
+// }
 
 /*
 Output:
