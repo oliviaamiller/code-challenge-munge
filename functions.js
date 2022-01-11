@@ -1,6 +1,3 @@
-// Use the forEach method to solve these problems! If the function returns an array, it should return a NEW array, without mutating the old array.
-
-
 /*
 For this first set of functions, assume the input array looks like this:
 
@@ -18,7 +15,8 @@ OUTPUT:
 */
 
 export function findByName(name, arr) {
-    return {};
+    const findName = arr.filter(pet => pet.name === name)[0];
+    return findName;
 }
 
 /*
@@ -30,7 +28,12 @@ OUTPUT:
 ]*/
 
 export function getDogs(arr) {
-    return [];
+    const dogs = arr.filter(pet => {
+        if(pet.type === 'dog') {
+            return true;
+        }
+    });
+    return dogs;
 }
 
 /*
@@ -39,7 +42,10 @@ OUTPUT:
 */
 
 export function getNamesOfDogs(arr) {
-    return [];
+    const dogNames = arr        
+        .filter(pet => pet.type === 'dog')
+        .map(pet => pet.name);
+    return dogNames;
 }
 
 
@@ -50,7 +56,10 @@ Output:
 */
 
 export function makeArrayOfNames(arr) {
-    return [];
+    const namesArr = arr.map(pet => {
+        return pet.name;
+    });
+    return namesArr;
 }
 
 /*
@@ -60,7 +69,10 @@ Output:
 */
 
 export function makeReversedArrayOfTypes(arr) {
-    return [];
+    const reverseType = arr.map(pet => {
+        return pet.type;
+    }).reverse();
+    return reverseType;
 }
 
 /*
@@ -75,8 +87,17 @@ Output:
 */
 
 export function makeSpanishLanguageArray(arr) {
-    return [];
+    const spanishArr = arr.map(pet => {
+        return {
+            nombre: pet.name,
+            tipo: pet.type
+        };
+    }); 
+    return spanishArr;
 }
+
+
+
 
 /*
 Output:
@@ -84,9 +105,9 @@ Output:
 ['spot', 'rover', 'jumpy', 'einstein']
 */
 
-export function makeArrayOfNamesWithMap(arr) {
-    return [];
-}
+// export function makeArrayOfNamesWithMap(arr) {
+//     return [];
+// }
 
 /*
 Output:
@@ -99,7 +120,14 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-    return [];
+    const hungryArr = arr.map(pet => {
+        return {
+            name: pet.name,
+            isHungry: true,
+            type: pet.type
+        };
+    }); 
+    return hungryArr;
 }
 
 /*
@@ -113,7 +141,13 @@ Output:
 ]*/
 
 export function makeShoutingArray(arr) {
-    return [];
+    const shoutArr = arr.map(pet => {
+        return {
+            name: pet.name.toUpperCase(),
+            type: pet.type
+        };
+    }); 
+    return shoutArr;
 }
 
 
@@ -124,7 +158,10 @@ Output:
 */
 
 export function makeStringArray(arr) {
-    return [];
+    const stringArr = arr.map(pet => {
+        return `${pet.name.toString()}${pet.type.toString()}`;
+    }); 
+    return stringArr;
 }
 
 /*
@@ -150,9 +187,15 @@ Output:
 */
 
 export function makeArrayOfArraysOfArrays(arr) {
-    return [];
-}
+    const arrArr = arr.map(pet => {
+        return [
+            ['name', pet.name],
+            ['type', pet.type]
+        ];
+    }); 
+    return arrArr;
 
+}
 ////////////////////////////////////////////////////////
 
 /*
@@ -179,7 +222,12 @@ Output:
 */
 
 export function getCars(arr) {
-    return [];
+    const cars = arr.filter(vehicle => {
+        if(vehicle.type === 'car') {
+            return true;
+        }
+    });
+    return cars;
 }
 
 /*
@@ -192,7 +240,12 @@ Output:
 */
 
 export function getChevyCars(arr) {
-    return [];
+    const getChevy = arr.filter(vehicle => {
+        if(vehicle.make === 'chevy' && vehicle.type === 'car') {
+            return true;
+        }
+    });
+    return getChevy;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
