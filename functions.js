@@ -158,7 +158,7 @@ Output:
 */
 
 export function makeStringArray(arr) {
-    return [];
+   
 }
 
 /*
@@ -213,7 +213,12 @@ Output:
 */
 
 export function getCars(arr) {
-    return [];
+    const cars = arr.filter(vehicle => {
+        if(vehicle.type === 'car') {
+            return true;
+        }
+    });
+    return cars;
 }
 
 /*
